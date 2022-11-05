@@ -23,8 +23,14 @@ const positions : List = { // варианты отображения
 
 // вывод 
 let output = Object.entries( positions ).map( (position , num ) => {
+    let chosen:string  = '';
+    if ( position[0] === condition ) {
+        chosen = 'bg-slate-400'
+    }
+
+
     return (
-        <button key = {`position ${num}`} onClick = {()=> dispatch( setCondition({condition : position[1]})) }>
+        <button className={`${chosen} w-[100%]`} key = {`position ${num}`} onClick = {()=> dispatch( setCondition({condition : position[1]})) }>
             {position[1]}
         </button>
     )
@@ -32,9 +38,7 @@ let output = Object.entries( positions ).map( (position , num ) => {
 
 
     return (
-        <div>
-            Selector
-            {positions[condition]}
+        <div className ={`flex flex-col border-[3px] items-center`}>
             {output}
         </div>
     )
