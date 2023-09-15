@@ -43,15 +43,13 @@ function Body () {
         }
 
         return (
-            <div className ={`flex justify-between`} key = {`todo-${todo.id}`}>
+            <div className ={`flex justify-between `} key = {`todo-${todo.id}`}>
                 <input type = {"checkbox"} onChange = { check } checked={todo.isDone}/>
                 <div> {todo.title} </div>
                 <button onClick = { clear  } >X</button>
             </div>
         )
     }) ;
-
-
 
     return (
     <div className ={`border-[3px]`}>

@@ -35,9 +35,9 @@ const Header: React.FC = () => {
   }
 
   return (
-      <div className ={`border-[3px]`}>
+      <div className ={`border-[3px] flex `}>
         <input
-          className ={`border-[3px]`}
+          className ={`border-[3px] flex grow`}
           autoFocus
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -45,7 +45,9 @@ const Header: React.FC = () => {
         />
         <button 
         className ={`border-[3px]`}
-        onClick={addDeal}> Add </button>
+        onClick={addDeal}>
+           Add 
+        </button>
       </div>
   );
 };

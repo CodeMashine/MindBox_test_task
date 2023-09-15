@@ -5,12 +5,14 @@ import { Selector } from '../components/selector/Selector' ;
 
 const App : React.FC =  () => {
   return (
-    <div className = {`flex justify-center`}>
+    <div className = {`flex flex-col justify-center w-[70%] mx-auto`}>
       <div>
-      <Header/>
-      <Body />
+        <Selector />
       </div>
-      <Selector />
+      <div className ={`flex flex-col`}>
+        <Header/>
+        <Body />
+      </div>
     </div>
   );
 }
